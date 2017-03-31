@@ -5,6 +5,8 @@
  */
 package com.cruiz90.presidencia;
 
+import com.cruiz90.presidencia.views.MainView;
+
 /**
  *
  * @author ISC. Carlos Alfredo Ruiz Calderon <car.ruiz90@gmail.com>
@@ -16,7 +18,8 @@ public class ControlDeIngresos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Max float: " + Float.MAX_VALUE);
+        MainView mv = new MainView();
+        mv.setVisible(true);
     }
 
 }
