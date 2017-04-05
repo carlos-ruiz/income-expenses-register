@@ -5,7 +5,7 @@
  */
 package com.cruiz90.presidencia;
 
-import com.cruiz90.presidencia.views.MainView;
+import com.cruiz90.presidencia.views.Login;
 
 /**
  *
@@ -18,8 +18,10 @@ public class ControlDeIngresos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MainView mv = new MainView();
-        mv.setVisible(true);
+//        MainView mv = new MainView();
+//        mv.setVisible(true);
+        Login login = new Login();
+        login.setVisible(true);
     }
 
 }
