@@ -33,7 +33,7 @@ public class Login extends JFrame implements ActionListener {
         }
         setSize(330, 200);
         setLayout(null);
-        setTitle("Control de solicitudes");
+        setTitle("Control de ingresos");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(dim.width / 2 - getSize().width / 2, dim.height / 2 - getSize().height / 2);
