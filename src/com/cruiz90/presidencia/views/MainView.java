@@ -173,6 +173,7 @@ public class MainView extends JFrame {
         JButton applyFilter = new JButton();
         applyFilter.addActionListener(applyFilters());
         imageIcon = new ImageIcon(new ImageIcon(getClass().getResource("/com/cruiz90/presidencia/images/find.png")).getImage().getScaledInstance(26, 26, Image.SCALE_SMOOTH));
+        applyFilter.setToolTipText("Aplicar filtros");
         applyFilter.setIcon(imageIcon);
         applyFilter.setBounds(840, 130, 26, 26);
         add(applyFilter);

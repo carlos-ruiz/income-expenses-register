@@ -39,8 +39,8 @@ public class ActionForMovement extends JDialog {
 
     private void initComponents() {
         setSize(250, 250);
-        setTitle("Editar movimiento");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setTitle("Editar movimiento");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
         //height of the task bar
@@ -105,8 +105,7 @@ public class ActionForMovement extends JDialog {
     }
 
     private void closeDialog() {
-        setVisible(false);
-        dispose();
+        this.dispose();
     }
 
 }
