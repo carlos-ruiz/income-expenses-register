@@ -85,7 +85,7 @@ public class ActionForMovement extends JDialog {
                     movement.delete();
                     dataContainer.updateDataTable(Movement.findAll());
                 }
-                closeDialog();
+                dispose();
             }
         };
     }
@@ -99,13 +99,9 @@ public class ActionForMovement extends JDialog {
                 mf.setDataContainer(dataContainer);
                 mf.setVisible(true);
 
-                closeDialog();
+                dispose();
             }
         };
-    }
-
-    private void closeDialog() {
-        this.dispose();
     }
 
 }

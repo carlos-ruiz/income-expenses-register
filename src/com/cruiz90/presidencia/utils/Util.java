@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,7 +21,7 @@ public class Util {
                     .getConnection("jdbc:mysql://localhost:3306/controlingresos", "root", "");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Connection Failed! Check output console");
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error de conexión a la base de datos\nAsegurate de tener corriendo el programa XAMPP", "Error de conexión", JOptionPane.ERROR_MESSAGE);
         }
         return connection;
     }

@@ -50,6 +50,7 @@ public class MainView extends JFrame {
     private JTable movementsTable;
     private MainView parentFrame;
     private JRadioButton allMovementsOption, periodMovementsOption, incomeMovementsOption, expenseMovementsOption;
+    private int hashMouseListener;
 
     public MainView() {
         initComponents();
@@ -278,9 +279,10 @@ public class MainView extends JFrame {
         movementsTable.setModel(tableModel);
         movementsTable.addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent evnt) {
-                if (evnt.getClickCount() == 1) {
-                    if (movementsTable.getSelectedRow() > -1) {
+            public void mousePressed(MouseEvent evnt) {
+                if (evnt.getClickCount() == 2) {
+                    if (movementsTable.getSelectedRow() > -1 && evnt.hashCode() != hashMouseListener) {
+                        hashMouseListener = evnt.hashCode();
                         ActionForMovement dialog = new ActionForMovement(parentFrame, true, (Integer) movementsTable.getValueAt(movementsTable.getSelectedRow(), 0));
                         dialog.setDataContainer(parentFrame);
                         dialog.setVisible(true);
