@@ -237,7 +237,7 @@ public class MainView extends JFrame {
     }
 
     public void updateDataTable(List<Movement> movements) {
-        if (movements.isEmpty()) {
+        if (movements == null || movements.isEmpty()) {
             ((DefaultTableModel) movementsTable.getModel()).setRowCount(0);
             JLabel label = new JLabel("Sin resultados");
             label.setSize(860, 30);
